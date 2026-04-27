@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
+
+    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+  </head>
+  <body class="bg-gray-200">
+    <header
+      class="flex justify-between items center py-3 px-4 md:px-10 lg:px-16"
+    >
+      <div class="flex items-center space-x-3">
+        <h3 class="font-bold text-2xl text-black">Shortly</h3>
+        <nav>
+          <ul class="flex space-x-2 text-gray-500 text-sm">
+            <li>Features</li>
+            <li>Pricing</li>
+            <li>Requirement</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="space-x-3 flex items-center">
+        <button>Login</button>
+        <button class="bg-blue-500 rounded-full text-white px-2 py-1">
+          Sign up
+        </button>
+      </div>
+    </header>
+
+    <main class="px-4 md:px-10 lg:px-16">
+      <!-- Hero Section  -->
+      <section
+        class="md:grid grid-cols-2 items-center pt-10 pb-30 space-y-4 md:space-x-4 md:space-y-0"
+      >
+        <div>
+          <h1 class="text-black text-4xl md:text-5xl lg:text-6xl font-bold">
+            More than just shorter links
+          </h1>
+          <p class="mt-3 mb-5 text-gray-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+            eveniet illo repudiandae ut earum iure id repudiandae ut earum iure
+            id.
+          </p>
+          <button class="bg-blue-500 text-white px-2 py-1 rounded-full">
+            Get started
+          </button>
+        </div>
+        <div class="max-w-150 mx-auto">
+          <img
+            src="./images/illustration-working.svg"
+            alt="illustration-working"
+          />
+        </div>
+      </section>
+
+      <!-- Form for input URL -->
+      <section class="form-section bg-[#3b3054] p-6 rounded-md">
+        <div>
+          <form
+            action="submit"
+            name="Form"
+            class="flex flex-row sm:flex-col space-x-4 sm:space-y-4 sm:space-x-0"
+          >
+            <input
+              type="text"
+              placeholder="shorten a link here"
+              class="grow bg-white px-4 py-2 placeholder:text-gray-600 rounded-md"
+            />
+            <button class="bg-blue-600 px-4 py-2 text-white rounded-md">
+              Shorten it
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Advanced Statistics -->
+      <section class="pt-30 pb-10 space-y-4">
+        <div class="text-center max-w-105 mx-auto">
+          <h2 class="text-3xl font-semibold mb-2">Advanced Statistics</h2>
+          <p class="text-sm text-gray-600">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolor
+            rerum accusantium iste eius cumque obcaecati!
+          </p>
+        </div>
+        <!-- 3 stats -->
+        <div class="grid sm:grid-cols-3 gap-4 md:gap-6">
+          <div class="bg-white p-4 rounded-md self-start">
+            <img src="./images/bg-boost-desktop.svg" alt="boost illustration" />
+            <h4 class="font-semibold text-xl">Brand Recognition</h4>
+            <p class="text-sm text-gray-600">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Distinctio, accusamus ducimus? Atque deserunt at consequuntur
+              consectetur officia. sed.
+            </p>
+          </div>
+          <div class="bg-white p-4 rounded-md self-start mt-6">
+            <img src="./images/bg-boost-desktop.svg" alt="boost illustration" />
+            <h4 class="font-semibold text-xl">Brand Recognition</h4>
+            <p class="text-sm text-gray-600">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Distinctio, accusamus ducimus? Atque deserunt at consequuntur
+              consectetur officia. sed.
+            </p>
+          </div>
+          <div class="bg-white p-4 rounded-md self-start mt-12">
+            <img src="./images/bg-boost-desktop.svg" alt="boost illustration" />
+            <h4 class="font-semibold text-xl">Brand Recognition</h4>
+            <p class="text-sm text-gray-600">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Distinctio, accusamus ducimus? Atque deserunt at consequuntur
+              consectetur officia. sed.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="bg-[#3b3054] py-6 space-y-4">
+      <h3 class="text-white font-semibold text-2xl text-center">
+        Boost your links today
+      </h3>
+      <button
+        class="mx-auto px-2 py-1 bg-blue-600 text-white block font-semibold rounded-full"
+      >
+        Get Started
+      </button>
+    </section>
+
+    <footer
+      style="background-color: #232127"
+      class="py-8 px-4 md:px-10 lg:px-16"
+    >
+      <div class="grid sm:grid-cols-3 gap-4">
+        <div>
+          <h3 class="font-semibold text-white">Shortly</h3>
+        </div>
+        <div class="text-white text-sm grid grid-cols-3 gap-4 w-fit">
+          <div>
+            <p class="font-semibold">Reshare</p>
+            <ul class="text-gray-400">
+              <li>Url Shortening</li>
+              <li>Branded linus</li>
+              <li>Advance</li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-semibold">References</p>
+            <ul class="text-gray-400">
+              <li>Blog</li>
+              <li>Powerpasss</li>
+              <li>Support</li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-semibold">Company</p>
+            <ul class="text-gray-400">
+              <li>About</li>
+              <li>Our terms</li>
+              <li>something</li>
+              <li>General</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <ul class="flex gap-2">
+            <li>
+              <img src="./images/icon-facebook.svg" alt="icon-facebook" />
+            </li>
+            <li><img src="./images/icon-twitter.svg" alt="icon-twitter" /></li>
+            <li>
+              <img src="./images/icon-pinterest.svg" alt="icon-pinterest" />
+            </li>
+            <li>
+              <img src="./images/icon-instagram.svg" alt="icon-instagram" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="/script.js"></script>
+  </body>
+</html>
