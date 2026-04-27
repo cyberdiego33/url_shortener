@@ -15,117 +15,204 @@
 
     <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
   </head>
-  <body class="bg-gray-200">
+
+  <body>
     <header
-      class="flex justify-between items center py-3 px-4 md:px-10 lg:px-16"
+      class="flex justify-between items center py-3 px-4 sm:px-10 lg:px-16"
     >
       <div class="flex items-center space-x-3">
-        <h3 class="font-bold text-2xl text-black">Shortly</h3>
-        <nav>
+        <h3 class="font-bold text-gray-900">Shortly</h3>
+        <nav class="max-sm:hidden">
           <ul class="flex space-x-2 text-gray-500 text-sm">
             <li>Features</li>
             <li>Pricing</li>
-            <li>Requirement</li>
+            <li>Resources</li>
           </ul>
         </nav>
       </div>
-      <div class="space-x-3 flex items-center">
+      <div class="space-x-3 flex items-center text-sm max-sm:hidden">
         <button>Login</button>
-        <button class="bg-blue-500 rounded-full text-white px-2 py-1">
+        <button class="bg-blue-btn rounded-full text-white px-2 py-1">
           Sign up
         </button>
       </div>
+      <div class="sm:hidden *:w-6 *:h-1 space-y-1 *:bg-gray-950 *:rounded-full">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </header>
 
-    <main class="px-4 md:px-10 lg:px-16">
+    <main class="">
       <!-- Hero Section  -->
       <section
-        class="md:grid grid-cols-2 items-center pt-10 pb-30 space-y-4 md:space-x-4 md:space-y-0"
+        class="px-4 sm:px-10 lg:px-16 md:flex flex-row-reverse items-center pt-10 pb-40 relative"
       >
-        <div>
-          <h1 class="text-black text-4xl md:text-5xl lg:text-6xl font-bold">
-            More than just shorter links
-          </h1>
-          <p class="mt-3 mb-5 text-gray-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-            eveniet illo repudiandae ut earum iure id repudiandae ut earum iure
-            id.
-          </p>
-          <button class="bg-blue-500 text-white px-2 py-1 rounded-full">
-            Get started
-          </button>
-        </div>
         <div class="max-w-150 mx-auto">
           <img
             src="./images/illustration-working.svg"
             alt="illustration-working"
           />
         </div>
-      </section>
 
-      <!-- Form for input URL -->
-      <section class="form-section bg-[#3b3054] p-6 rounded-md">
-        <div>
-          <form
-            action="submit"
-            name="Form"
-            class="flex flex-row sm:flex-col space-x-4 sm:space-y-4 sm:space-x-0"
+        <div class="flex flex-col justify-center max-md:text-center">
+          <h1
+            class="text-gray-900 text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
           >
-            <input
-              type="text"
-              placeholder="shorten a link here"
-              class="grow bg-white px-4 py-2 placeholder:text-gray-600 rounded-md"
-            />
-            <button class="bg-blue-600 px-4 py-2 text-white rounded-md">
-              Shorten it
-            </button>
-          </form>
-        </div>
-      </section>
-
-      <!-- Advanced Statistics -->
-      <section class="pt-30 pb-10 space-y-4">
-        <div class="text-center max-w-105 mx-auto">
-          <h2 class="text-3xl font-semibold mb-2">Advanced Statistics</h2>
-          <p class="text-sm text-gray-600">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolor
-            rerum accusantium iste eius cumque obcaecati!
+            More than just shorter links
+          </h1>
+          <p class="mt-3 mb-5 text-gray-500 max-w-90 max-md:mx-auto">
+            Build your brand’s recognition and get detailed insights on how your
+            links are performing.
           </p>
+          <button
+            class="bg-blue-btn w-fit text-white px-8 py-3 rounded-full font-bold max-md:mx-auto"
+          >
+            Get Started
+          </button>
         </div>
-        <!-- 3 stats -->
-        <div class="grid sm:grid-cols-3 gap-4 md:gap-6">
-          <div class="bg-white p-4 rounded-md self-start">
-            <img src="./images/bg-boost-desktop.svg" alt="boost illustration" />
-            <h4 class="font-semibold text-xl">Brand Recognition</h4>
-            <p class="text-sm text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Distinctio, accusamus ducimus? Atque deserunt at consequuntur
-              consectetur officia. sed.
-            </p>
-          </div>
-          <div class="bg-white p-4 rounded-md self-start mt-6">
-            <img src="./images/bg-boost-desktop.svg" alt="boost illustration" />
-            <h4 class="font-semibold text-xl">Brand Recognition</h4>
-            <p class="text-sm text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Distinctio, accusamus ducimus? Atque deserunt at consequuntur
-              consectetur officia. sed.
-            </p>
-          </div>
-          <div class="bg-white p-4 rounded-md self-start mt-12">
-            <img src="./images/bg-boost-desktop.svg" alt="boost illustration" />
-            <h4 class="font-semibold text-xl">Brand Recognition</h4>
-            <p class="text-sm text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Distinctio, accusamus ducimus? Atque deserunt at consequuntur
-              consectetur officia. sed.
-            </p>
+
+        <!-- Form for input URL Section -->
+        <!-- FORM SECTION: Absolute/Relative Overlap -->
+        <div
+          class="absolute left-4 right-4 sm:left-10 sm:right-10 lg:left-16 lg:right-16 bottom-0 translate-y-1/2 z-10"
+        >
+          <div
+            class="bg-purple-bg max-md:bg-mobile-hero md:bg-hero bg-cover p-6 sm:p-10 rounded-lg shadow-lg"
+          >
+            <form id="Url-form" class="flex flex-col sm:flex-row gap-4">
+              <input
+                type="text"
+                placeholder="Shorten a link here..."
+                class="grow bg-white px-4 py-3 placeholder:text-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-btn"
+              />
+              <button
+                id="shorten-btn"
+                class="bg-blue-btn hover:bg-opacity-80 px-8 py-3 text-white font-bold rounded-md transition-all"
+              >
+                <!-- Spinner SVG (Hidden by default) -->
+                <svg
+                  id="Spinner"
+                  class="hidden animate-spin mx-auto h-5 w-5 text-white"
+                  xmlns="http://w3.org"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    class="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    stroke-width="4"
+                  ></circle>
+                  <path
+                    class="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
+                </svg>
+                <span>Shorten It!</span>
+              </button>
+            </form>
+            <!-- Error message goes here  -->
+            <p id="error-message" class="text-red-400 text-xs mt-2 italic"></p>
           </div>
         </div>
       </section>
+      <!-- flex justify-between items-center -->
+      <div class="bg-gray-400 px-4 sm:px-10 lg:px-16 pt-24 pb-20">
+        <!-- Links will appear here -->
+        <div id="Links-container" class="max-w-4xl mx-auto space-y-4 mb-16">
+          <!-- Result items go here -->
+          <div
+            class="bg-white p-2 rounded-md mb-2 md:flex md:justify-between md:items-center"
+          >
+            <p class="truncate mr-4">https://react-icons.github.io</p>
+            <div class="divider my-2 h-0.5 bg-gray-950 md:hidden"></div>
+            <div class="flex max-md:flex-col gap-2 md:items-center">
+              <p class="text-blue-500 font-medium">
+                https://cleanuri.com/5MAReG
+              </p>
+              <button
+                class="copy-btn px-3 py-1 bg-blue-600 text-white rounded-md transition-colors hover:bg-blue-700"
+              >
+                Copy
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Advanced Statistics -->
+        <section class="max-w-6xl mx-auto">
+          <div class="text-center max-w-xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Advanced Statistics
+            </h2>
+            <p class="text-gray-500">
+              Track how your links are performing across the web with our
+              advanced statistics dashboard.
+            </p>
+          </div>
+          <!-- 3 stats -->
+          <div
+            class="flex flex-col max-md:items-center md:flex-row gap-8 items-start"
+          >
+            <!-- Card 1 -->
+            <div class="bg-white p-8 rounded-lg relative max-w-92">
+              <div class="bg-purple-bg p-3 rounded-full absolute -top-8 left-8">
+                <img
+                  src="./images/icon-brand-recognition.svg"
+                  class="w-8 h-8"
+                  alt=""
+                />
+              </div>
+              <h4 class="font-bold text-xl mt-4 mb-4">Brand Recognition</h4>
+              <p class="text-gray-500 text-sm">
+                Boost your brand recognition with every click. Generic links
+                don't mean a thing. Branded links help instill confidence in
+                your content.
+              </p>
+            </div>
+            <!-- Card 2 (Add mt-10 on lg screens for the staggered look) -->
+            <div class="bg-white mt-10 p-8 rounded-lg relative max-w-92">
+              <div class="bg-purple-bg p-3 rounded-full absolute -top-8 left-8">
+                <img
+                  src="./images/icon-detailed-records.svg"
+                  class="w-8 h-8"
+                  alt=""
+                />
+              </div>
+              <h4 class="font-bold text-xl mt-4 mb-4">Detailed Records</h4>
+              <p class="text-gray-500 text-sm">
+                Gain insights into who is clicking your links. Knowing when and
+                where people engage with your content helps inform better
+                decision.
+              </p>
+            </div>
+            <!-- Card 3 (Add mt-20 on lg screens) -->
+            <div class="bg-white mt-20 p-8 rounded-lg relative max-w-92">
+              <div class="bg-purple-bg p-3 rounded-full absolute -top-8 left-8">
+                <img
+                  src="./images/icon-fully-customizable.svg"
+                  class="w-8 h-8"
+                  alt=""
+                />
+              </div>
+              <h4 class="font-bold text-xl mt-4 mb-4">Fully Customizable</h4>
+              <p class="text-gray-500 text-sm">
+                Improve brand awareness and content discoverability through
+                customizable links, supercharging audience engagement
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
 
-    <section class="bg-[#3b3054] py-6 space-y-4">
+    <section
+      class="bg-purple-bg max-md:bg-mobile-boost md:bg-boost bg-cover py-6 space-y-4"
+    >
       <h3 class="text-white font-semibold text-2xl text-center">
         Boost your links today
       </h3>
@@ -138,13 +225,15 @@
 
     <footer
       style="background-color: #232127"
-      class="py-8 px-4 md:px-10 lg:px-16"
+      class="py-8 px-4 sm:px-10 lg:px-16"
     >
-      <div class="grid sm:grid-cols-3 gap-4">
+      <div
+        class="grid sm:grid-cols-3 max-md:gap-y-4 md:gap-x-4 max-md:justify-center max-md:text-center"
+      >
         <div>
           <h3 class="font-semibold text-white">Shortly</h3>
         </div>
-        <div class="text-white text-sm grid grid-cols-3 gap-4 w-fit">
+        <div class="text-white text-sm grid md:grid-cols-3 gap-4 w-fit">
           <div>
             <p class="font-semibold">Reshare</p>
             <ul class="text-gray-400">

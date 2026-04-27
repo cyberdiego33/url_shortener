@@ -1,1 +1,33 @@
 @import "tailwindcss";
+@import url("https://googleapis.com");
+
+@theme {
+  /* Default Font Mapping */
+  --font-sans: "Poppins", ui-sans-serif, system-ui;
+
+  /* Custom Colors from your list */
+  --color-primary: #3b82f6;
+  --color-blue-btn: #2acfcf;
+  --color-purple-bg: #3b3054;
+
+  /* Mapped HSL colors */
+  --color-gray-400: #bfbfbf;
+  --color-gray-500: hsl(257, 7%, 63%);
+  --color-gray-900: hsl(255, 11%, 22%);
+  --color-gray-950: hsl(260, 8%, 14%);
+
+  --color-purple-950: hsl(257, 27%, 26%);
+  --color-red-400: hsl(0, 87%, 67%);
+
+  --background-image-hero: url("/images/bg-shorten-desktop.svg");
+  --background-image-boost: url("/images/bg-boost-desktop.svg");
+  --background-image-mobile-hero: url("/images/bg-shorten-mobile.svg");
+  --background-image-mobile-boost: url("/images/bg-boost-mobile.svg");
+}
+
+body {
+  /* Tailwind v4 automatically applies --font-sans to the body, 
+     but keeping this here is a safe backup */
+  font-family: "Poppins", sans-serif;
+  color: var(--color-gray-900);
+}
