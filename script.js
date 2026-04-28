@@ -81,6 +81,7 @@ const loadingSpinner = function () {
 
 MenuButton.addEventListener("click", () => {
   MobileNav.classList.toggle("h-0");
+  MobileNav.classList.toggle("max-h-96");
   MobileNav.classList.toggle("py-6");
 });
 
