@@ -18,7 +18,7 @@
 
   <body>
     <header
-      class="flex justify-between items center py-3 px-4 sm:px-10 lg:px-16"
+      class="flex justify-between items center py-3 px-4 sm:px-10 lg:px-16 relative"
     >
       <div class="flex items-center space-x-3">
         <h3 class="font-bold text-gray-900">Shortly</h3>
@@ -36,10 +36,33 @@
           Sign up
         </button>
       </div>
-      <div class="sm:hidden *:w-6 *:h-1 space-y-1 *:bg-gray-950 *:rounded-full">
+      <div
+        id="MenuButton"
+        class="sm:hidden hover:cursor-pointer *:w-6 *:h-1 space-y-1 *:bg-gray-950 *:rounded-full"
+      >
         <div></div>
         <div></div>
         <div></div>
+      </div>
+
+      <div
+        id="Mobile-nav"
+        class="md:hidden absolute mx-4 sm:mx-10 top-full inset-x-0 h-0 px-4 transition-all bg-purple-bg rounded-md z-100 overflow-hidden"
+      >
+        <div
+          class="text-center text-white *:font-semibold *:py-3 border-b border-b-gray-600"
+        >
+          <p>Features</p>
+          <p>Pricing</p>
+          <p>Resources</p>
+        </div>
+
+        <div
+          class="flex flex-col text-center pt-2 space-y-2 text-white *:font-semibold *:py-3 *:px-8 *:rounded-full"
+        >
+          <button class="hover:bg-gray-700">Login</button>
+          <button class="bg-blue-btn">Sign Up</button>
+        </div>
       </div>
     </header>
 
@@ -88,7 +111,7 @@
               />
               <button
                 id="shorten-btn"
-                class="bg-blue-btn hover:bg-opacity-80 px-8 py-3 text-white font-bold rounded-md transition-all"
+                class="bg-blue-btn hover:bg-opacity-80 px-8 py-3 text-white font-bold rounded-md transition-all hover:cursor-pointer"
               >
                 <!-- Spinner SVG (Hidden by default) -->
                 <svg
@@ -120,12 +143,12 @@
           </div>
         </div>
       </section>
-      <!-- flex justify-between items-center -->
+
       <div class="bg-gray-400 px-4 sm:px-10 lg:px-16 pt-24 pb-20">
         <!-- Links will appear here -->
         <div id="Links-container" class="max-w-4xl mx-auto space-y-4 mb-16">
           <!-- Result items go here -->
-          <div
+          <!-- <div
             class="bg-white p-2 rounded-md mb-2 md:flex md:justify-between md:items-center"
           >
             <p class="truncate mr-4">https://react-icons.github.io</p>
@@ -140,7 +163,7 @@
                 Copy
               </button>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <!-- Advanced Statistics -->
@@ -156,11 +179,18 @@
           </div>
           <!-- 3 stats -->
           <div
-            class="flex flex-col max-md:items-center md:flex-row gap-8 items-start"
+            class="flex flex-col max-md:items-center md:flex-row gap-8 items-start relative"
           >
+            <!-- <div class="absolute top-1/2 inset-x-0 h-2 bg-blue-btn"></div>  -->
+            <div
+              class="absolute /* Mobile: Vertical line centered */ inset-y-0 left-1/2 w-2 -translate-x-1/2 /* Desktop (md): Horizontal line centered vertically */ md:inset-x-0 md:top-1/2 md:h-2 md:w-full md:left-0 md:translate-x-0 md:-translate-y-1/2 bg-blue-btn"
+            ></div>
+
             <!-- Card 1 -->
             <div class="bg-white p-8 rounded-lg relative max-w-92">
-              <div class="bg-purple-bg p-3 rounded-full absolute -top-8 left-8">
+              <div
+                class="bg-purple-bg p-3 rounded-full absolute -top-8 left-1/2 -translate-x-1/2 md:left-8 sm:translate-x-0"
+              >
                 <img
                   src="./images/icon-brand-recognition.svg"
                   class="w-8 h-8"
@@ -176,7 +206,9 @@
             </div>
             <!-- Card 2 (Add mt-10 on lg screens for the staggered look) -->
             <div class="bg-white mt-10 p-8 rounded-lg relative max-w-92">
-              <div class="bg-purple-bg p-3 rounded-full absolute -top-8 left-8">
+              <div
+                class="bg-purple-bg p-3 rounded-full absolute -top-8 left-1/2 -translate-x-1/2 md:left-8 sm:translate-x-0"
+              >
                 <img
                   src="./images/icon-detailed-records.svg"
                   class="w-8 h-8"
@@ -192,7 +224,9 @@
             </div>
             <!-- Card 3 (Add mt-20 on lg screens) -->
             <div class="bg-white mt-20 p-8 rounded-lg relative max-w-92">
-              <div class="bg-purple-bg p-3 rounded-full absolute -top-8 left-8">
+              <div
+                class="bg-purple-bg p-3 rounded-full absolute -top-8 left-1/2 -translate-x-1/2 md:left-8 sm:translate-x-0"
+              >
                 <img
                   src="./images/icon-fully-customizable.svg"
                   class="w-8 h-8"

@@ -7,6 +7,8 @@ const LinksContainer = document.querySelector("#Links-container");
 const ShortenBtn = document.querySelector("#shorten-btn");
 const spanText = ShortenBtn.querySelector("span");
 const Spinner = document.querySelector("#Spinner");
+const MenuButton = document.querySelector("#MenuButton");
+const MobileNav = document.querySelector("#Mobile-nav");
 
 const errorFunc = function () {
   ErrorField.textContent = "please add a link";
@@ -39,7 +41,7 @@ const successFunc = function (mainLink, shortLink) {
                 https://cleanuri.com/5MAReG
               </p>
               <button
-                class="copy-btn px-3 py-1 bg-blue-600 text-white rounded-md transition-colors hover:bg-blue-700"
+                class="copy-btn px-3 py-1 bg-blue-600 text-white rounded-md transition-colors hover:bg-blue-700 hover:cursor-pointer"
               >
                 Copy
               </button>
@@ -76,6 +78,11 @@ const loadingSpinner = function () {
   spanText.classList.toggle("hidden");
   Spinner.classList.toggle("hidden");
 };
+
+MenuButton.addEventListener("click", () => {
+  MobileNav.classList.toggle("h-0");
+  MobileNav.classList.toggle("py-6");
+});
 
 // The main async func that does the api request
 async function shortenUrl(longUrl) {
